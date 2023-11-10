@@ -1,0 +1,7 @@
+{
+  "name": "PIA_Equipo2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
