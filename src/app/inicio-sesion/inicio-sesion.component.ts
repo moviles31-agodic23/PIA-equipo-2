@@ -11,4 +11,7 @@ export class InicioSesionComponent  implements OnInit {
 
   ngOnInit() {}
 
+
+  tamanoCel: number = 12;
+  tamanoGrande: number = 5;
 }

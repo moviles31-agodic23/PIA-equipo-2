@@ -1,22 +1,54 @@
 <ion-content [fullscreen]="true">
-    <ion-card id="login">
-      <ion-card-header>
-        <ion-card-title color="success"><strong>Inicio de sesion</strong></ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <form #templateForm="ngForm">
-          <ion-item>
-            <ion-label position="floating">Usuario</ion-label>
-            <ion-input type="text" name="user" required></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input label="Contraseña" [counter]="true" labelPlacement="floating" maxlength="18" type="password" required></ion-input>
-          </ion-item>
-          <br>
-          <ion-button fill="clear" size="default" color="success" type="submit">Inicio Sesion</ion-button>
-        </form>
-      </ion-card-content>
-    </ion-card>
+  <ion-grid [fixed]="true">
+    <ion-row>
+      <ion-col size="{{tamanoCel}}" size-lg="5">
+        <ion-card id="login">
+          <ion-card-header>
+            <ion-card-title color="success"><strong>Inicio de sesion</strong></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form #templateForm="ngForm">
+              <ion-item>
+                <ion-label position="floating">Usuario</ion-label>
+                <ion-input type="text" name="user" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input label="Contraseña" [counter]="true" labelPlacement="floating" maxlength="18" type="password" required></ion-input>
+              </ion-item>
+              <br>
+              <ion-button fill="clear" size="default" color="success" type="submit">Inicio Sesion</ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="{{tamanoCel}}" size-lg="5">
+        <ion-card id="registro">
+          <ion-card-header>
+            <ion-card-title color="success"><strong>Crea tu cuenta</strong></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <form #templateForm="ngForm">
+              <ion-item>
+                <ion-label position="floating">Usuario</ion-label>
+                <ion-input type="text" name="user" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input label="Contraseña" [counter]="true" labelPlacement="floating" maxlength="18" type="password" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input label="Confirma contraseña" [counter]="true" labelPlacement="floating" maxlength="18" type="password" required></ion-input>
+              </ion-item>
+              <br>
+              <ion-button fill="clear" size="default" color="success" type="submit">Crear la cuenta</ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    
 
 </ion-content>
 
