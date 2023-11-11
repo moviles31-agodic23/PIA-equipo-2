@@ -1,19 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Inicio
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Inicio</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title color="success">"Nombre App"</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <form>
+          <ion-item>
+            <ion-input label="Usuario" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Contraseña" [counter]="true" maxlength="18" type="password"></ion-input>
+          </ion-item>
+          <br>
+          <ion-button fill="clear" size="default" color="success">Inicio Sesion</ion-button>
+        </form>
+      </ion-card-content>
+    </ion-card>
 
   </div>
 
