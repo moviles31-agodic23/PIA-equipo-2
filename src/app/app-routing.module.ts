@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FeedComponent } from './feed/feed.component';
+import { CamaraComponent } from './camara/camara.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'inicio',
     component: FeedComponent,
+  },
+  {
+    path: 'camara',
+    component: CamaraComponent,
   }
 ];
 
