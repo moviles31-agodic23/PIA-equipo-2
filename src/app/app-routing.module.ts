@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,17 @@ const routes: Routes = [
     path: 'login',
     component: InicioSesionComponent,
   },
+  // las siguientes rutas fueron hechas para pruebas
+  // revisar si es que se pueden -
+  // utilizar para la funcionalidad
+  {
+    path: 'perfil',
+    component: PerfilComponent,
+  },
+  {
+    path: 'inicio',
+    component: FeedComponent,
+  }
 ];
 
 @NgModule({

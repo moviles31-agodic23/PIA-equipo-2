@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { InicioSesionComponent } from '../inicio-sesion/inicio-sesion.component';
 import { CamaraComponent } from '../camara/camara.component';
 import { PerfilComponent } from '../perfil/perfil.component';
+import { FeedComponent } from '../feed/feed.component';
 
 
 @NgModule({
@@ -17,6 +18,6 @@ import { PerfilComponent } from '../perfil/perfil.component';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, InicioSesionComponent, CamaraComponent, PerfilComponent]
+  declarations: [HomePage, InicioSesionComponent, CamaraComponent, PerfilComponent, FeedComponent]
 })
 export class HomePageModule {}
