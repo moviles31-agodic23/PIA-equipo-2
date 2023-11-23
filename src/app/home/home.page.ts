@@ -21,6 +21,6 @@ export class HomePage {
   }
 
   goHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/feed']);
   }
 }

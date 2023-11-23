@@ -44,15 +44,14 @@
       <ion-col>
         <ion-button class="editarPerfil">Editar Perfil</ion-button>
       </ion-col>
-
-      <ion-col>
-        <ion-button class="editarPerfil" (click)="goHome()"> Home </ion-button>
-      </ion-col>
-
     </ion-row>
     
-    <ion-row>
-      *Espacio para las fotoss*
-    </ion-row>
+    
+      <ion-row>
+        <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </ion-col>
+      </ion-row>
+    
   </ion-grid>
 </ion-content>
