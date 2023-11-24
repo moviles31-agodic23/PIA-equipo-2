@@ -16,7 +16,7 @@ export class PerfilComponent  implements OnInit {
 
 
   Editar(){
-    this.router.navigate(['/editar-perfil']);
+    this.router.navigate(['/editar']);
   }
 
 

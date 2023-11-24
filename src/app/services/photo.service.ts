@@ -23,6 +23,9 @@ export class PhotoService {
       webviewPath: capturedPhoto.webPath!
     });
   }
+  public async photoUser(){
+    
+  }
 
   public photos: UserPhoto[]=[];
 }

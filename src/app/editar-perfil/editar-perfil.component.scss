@@ -1,0 +1,23 @@
+ion-card {
+    text-align: center;
+  }
+ion-avatar{
+    margin-bottom: 50px;
+}
+  
+.profile-image-container {
+  position: relative;
+}
+
+.change-image-button {
+  position: absolute;
+  bottom: 10px; /* Ajusta la posición vertical según tus necesidades */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.fotoPerfil {
+    width: 100px; /* Ajusta el ancho según tus necesidades */
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    margin: auto;
+    display: block;
+  }

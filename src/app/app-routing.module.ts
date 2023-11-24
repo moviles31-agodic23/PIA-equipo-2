@@ -4,6 +4,7 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { FeedComponent } from './feed/feed.component';
 import { CamaraComponent } from './camara/camara.component';
+import { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'camara',
     component: CamaraComponent,
+  },
+  {
+    path: 'editar',
+    component: EditarPerfilComponent,
   }
 ];
 

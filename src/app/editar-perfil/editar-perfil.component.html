@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/perfil"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Informacion del Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    
+    <ion-card-content>
+      <div class="user-image-container">
+        <ion-avatar  (click)="elegirImagen()">
+          <ion-img class="fotoPerfil" src="https://th.bing.com/th/id/R.39eb0bbf2cc33ba02f53f8585004f820?rik=E0Gn4xMJk2ZerA&pid=ImgRaw&r=0" alt=""></ion-img>
+        </ion-avatar>
+        <ion-button expand="full" class="change-image-button">
+          Cambiar Imagen
+        </ion-button>
+      </div>
+      
+      <ion-list>
+        <!-- Formulario de Cambio de Usuario y Descripción -->
+        <ion-item>
+          <ion-label position="stacked">Usuario</ion-label>
+          <ion-input [(ngModel)]="nuevoUsuario" name="nuevoUsuario" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Correo</ion-label>
+          <ion-input [(ngModel)]="nuevoCorreo" name="nuevoCorreo" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Descripción</ion-label>
+          <ion-textarea [(ngModel)]="nuevaDescripcion" name="nuevaDescripcion"></ion-textarea>
+        </ion-item>
+
+        <!-- Botón para Enviar el Formulario -->
+        <ion-button expand="full" (click)="guardarCambios()">Guardar Cambios</ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

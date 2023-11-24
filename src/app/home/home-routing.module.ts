@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePage } from './home.page';
 import { FeedComponent } from '../feed/feed.component';
 import { PerfilComponent } from '../perfil/perfil.component';
+import { EditarPerfilComponent } from '../editar-perfil/editar-perfil.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'perfil',
         component: PerfilComponent,
+      },
+      {
+        path: 'editar',
+        component: EditarPerfilComponent,
       }
     ]
   },
