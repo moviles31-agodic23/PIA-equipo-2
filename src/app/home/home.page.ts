@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(public photoService: PhotoService,
-              private router: Router) {}
+  constructor(public photoService: PhotoService) {}
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
-  }
-
-  abrirPerfil(){
-    this.router.navigate(['/perfil']);
-  }
-
-  goHome(){
-    this.router.navigate(['/feed']);
   }
 }
