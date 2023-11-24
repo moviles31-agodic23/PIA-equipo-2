@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      @user
+      {{datosUsuario.email}}
     </ion-title>
   </ion-toolbar>
  
@@ -33,11 +33,14 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <p><strong>*User name</strong></p>
-        <p>Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. 
-          Sed ligula est, luctus ac facilisis ut, 
-          malesuada et diam. Integer sed gravida lectus.</p>
+        <ion-text>
+          <p><strong>*User name</strong></p>
+          <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. 
+            Sed ligula est, luctus ac facilisis ut, 
+            malesuada et diam. Integer sed gravida lectus.</p>
+        </ion-text>
+        
       </ion-col>
     </ion-row>
     <ion-row>
@@ -49,7 +52,7 @@
     
       <ion-row>
         <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
-          <ion-img [src]="photo.webviewPath"></ion-img>
+          <ion-img [src]="photo.webviewPath" ></ion-img>
         </ion-col>
       </ion-row>
     

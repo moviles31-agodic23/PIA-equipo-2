@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { PhotoService } from '../services/photo.service';
+import { DatosUsuarioService } from '../datos-usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -10,7 +11,8 @@ import { PhotoService } from '../services/photo.service';
 export class PerfilComponent  implements OnInit {
 
   constructor(private router: Router,
-    public photoService: PhotoService) { }
+              public photoService: PhotoService,
+              public datosUsuario: DatosUsuarioService,) { }
 
   ngOnInit() {}
 
@@ -18,19 +20,4 @@ export class PerfilComponent  implements OnInit {
   Editar(){
     this.router.navigate(['/editar']);
   }
-
-
-  goHome(){
-    this.router.navigate(['/inicio']);
-  }
-
-  addPhotoToGallery() {
-    this.router.navigate(['/perfil']);
-    this.photoService.addNewToGallery();
-  }
-
-  abrirPerfil(){
-    this.router.navigate(['/perfil']);
-  }
-
 }

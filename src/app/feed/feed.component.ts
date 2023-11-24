@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { PhotoService } from '../services/photo.service';
+import { InicioSesionComponent } from '../inicio-sesion/inicio-sesion.component';
+import { DatosUsuarioService } from '../datos-usuario.service';
 
 @Component({
   selector: 'app-feed',
@@ -9,22 +10,10 @@ import { PhotoService } from '../services/photo.service';
 })
 export class FeedComponent  implements OnInit {
 
-  constructor(private router: Router,
-    public photoService: PhotoService) { }
+  constructor(public photoService: PhotoService,
+              public datosUsuario: DatosUsuarioService) { }
 
   ngOnInit() {}
+   
 
-
-  goHome(){
-    this.router.navigate(['/feed']);
-  }
-
-  addPhotoToGallery() {
-    this.router.navigate(['/perfil']);
-    this.photoService.addNewToGallery();
-  }
-
-  abrirPerfil(){
-    this.router.navigate(['/perfil']);
-  }
 }
