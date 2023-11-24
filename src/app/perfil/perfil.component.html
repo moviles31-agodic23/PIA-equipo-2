@@ -10,7 +10,9 @@
   <ion-grid>
     <ion-row class="ion-align-items-center">
       <ion-col>
-        <img class="fotoPerfil" src="https://th.bing.com/th/id/R.39eb0bbf2cc33ba02f53f8585004f820?rik=E0Gn4xMJk2ZerA&pid=ImgRaw&r=0" alt="">
+        <ion-avatar>
+          <ion-img class="fotoPerfil" [src]="(photoService.profile[0]?.webviewPath) ? photoService.profile[0]?.webviewPath : 'https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain'" alt=""></ion-img>
+        </ion-avatar>
       </ion-col>
       <ion-col>
         <div class="contenedorPerfil">

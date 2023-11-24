@@ -28,7 +28,7 @@
               <br>
               <ion-button fill="clear" size="default" color="success" type="submit" (click)="iniciarSesion()" >Inicio Sesion</ion-button>
             </form>
-
+<!-- crea tu cuenta -->
           </ion-card-content>
         </ion-card>
       </ion-col>
@@ -43,6 +43,14 @@
 
             <form #templateForm="ngForm" >
               <ion-item>
+                <ion-label position="floating">Tu nombre de Usuario</ion-label>
+                <ion-input labelPlacement="floating" type="text"  required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">Tu nombre</ion-label>
+                <ion-input labelPlacement="floating" type="text" required></ion-input>
+              </ion-item>
+              <ion-item>
                 <ion-label position="floating">Correo</ion-label>
                 <ion-input [(ngModel)]="datos.emailReg" name="null" type="text" name="user" required ></ion-input>
               </ion-item>
@@ -53,6 +61,7 @@
               <ion-item>
                 <ion-input [(ngModel)]="datos.passwordRegConf" name="null" label="Confirma contraseña" [counter]="true" labelPlacement="floating" minlength="6" maxlength="18" type="password" required></ion-input>
               </ion-item>
+              
               <br>
               <ion-button fill="clear" size="default" color="success" type="submit" (click)="registrar()"> Crear la cuenta </ion-button>
             </form>
