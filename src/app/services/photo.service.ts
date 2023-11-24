@@ -24,9 +24,19 @@ export class PhotoService {
     });
   }
   public async photoUser(){
-    
+    const capturedPhoto = await Camera.getPhoto({
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+      quality: 100
+    });
+
+    this.profile.unshift({
+      filepath: "soon...",
+      webviewPath: capturedPhoto.webPath!
+    });
   }
 
+  public profile: UserPhoto[]=[];
   public photos: UserPhoto[]=[];
 }
 
