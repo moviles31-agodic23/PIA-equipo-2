@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserRegistro } from '../models/models';
 import { Auth } from '@angular/fire/auth/firebase';
+import { DatosUsuarioService } from '../datos-usuario.service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -29,10 +30,15 @@ export class InicioSesionComponent  implements OnInit {
 
   constructor( 
     private router: Router,
-    private auth: UserService
+    private auth: UserService,
+    public datosUsuario: DatosUsuarioService,
     ) {}
 
   ngOnInit()  {}
+
+  setUsuario(){
+    this.datosUsuario.email= this.login.email;
+  }
 
   component = HomePage;
   tamanoCel: number = 12;
@@ -50,7 +56,8 @@ export class InicioSesionComponent  implements OnInit {
     })
     if (res){
       console.log('res -> ', res);
-      this.router.navigate(['/home']);
+      this.setUsuario();
+      this.router.navigate(['/home/inicio']);
     }
   }
 
