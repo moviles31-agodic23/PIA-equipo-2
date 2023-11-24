@@ -9,7 +9,7 @@ import { DatosUsuarioService } from '../datos-usuario.service';
 })
 export class EditarPerfilComponent  implements OnInit {
 
-  nuevoUsuario: string = 'DefaultUser';
+  nuevoUsuario: string = this.datosUsuario.usuario;
   nuevoCorreo: string = this.datosUsuario.email;
   nuevaDescripcion: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula est, luctus ac facilisis ut, malesuada et diam. Integer sed gravida lectus.';
   imagenUsuario: string="https://th.bing.com/th/id/R.39eb0bbf2cc33ba02f53f8585004f820?rik=E0Gn4xMJk2ZerA&pid=ImgRaw&r=0";
@@ -31,5 +31,7 @@ export class EditarPerfilComponent  implements OnInit {
     console.log('Nuevo Correo:', this.nuevoCorreo);
     console.log('Nueva Descripción:', this.nuevaDescripcion);
     //Aqui hacemos cambios en el backend
+    this.datosUsuario.usuario=this.nuevoUsuario;
+    this.datosUsuario.email= this.nuevoCorreo;
   }
 }

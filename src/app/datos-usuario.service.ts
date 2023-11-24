@@ -7,6 +7,6 @@ export class DatosUsuarioService {
 
   constructor() { }
 
-  public usuario: string= '';
-  public email: any = 'usuario';
+  public usuario: string= 'User';
+  public email: any = 'user.1@email.com';
 }
