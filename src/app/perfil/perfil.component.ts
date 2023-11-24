@@ -14,6 +14,12 @@ export class PerfilComponent  implements OnInit {
 
   ngOnInit() {}
 
+
+  Editar(){
+    this.router.navigate(['/editar-perfil']);
+  }
+
+
   goHome(){
     this.router.navigate(['/inicio']);
   }
