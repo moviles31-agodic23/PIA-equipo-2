@@ -1,164 +1,186 @@
-<ion-content>
-  <ion-text *ngIf="photoService.photos.length === 0">
-    <h2>Presiona el icono de la cámara para crear una publicación nueva</h2>
-</ion-text>
-  <div *ngFor="let photo of photoService.photos; index as position"><!--  Div para hacer el ngFor -->
-    <!-- <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
-      <ion-img [src]="photo.webviewPath" ></ion-img>
-    </ion-col> -->
-    <ion-card>
-      <ion-card-title>
-        <ion-grid>
-          <ion-row class="ion-align-items-center">
-            <ion-col size="2">
-              <!-- Imagen de perfil de prueba -->
-              <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
-            </ion-col>
-            <ion-col size="8">{{datosUsuario.email}}</ion-col>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        
-      </ion-card-title>
-      <ion-card-content>
-        <!-- Imagen de prueba -->
-        <img [src]="photo.webviewPath" alt="">
-        <ion-grid >
-          <ion-row>
-            <ion-col size="2" >
-              <ion-button fill="clear">
-                <ion-icon name="heart-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="chatbubble-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col size=2>
-              <ion-button fill="clear">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </ion-button> 
-            </ion-col>
-            <ion-col offset="4" size="2">
-              <ion-button fill="clear">
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <p>Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Sed ligula est,
-           luctus ac facilisis ut, malesuada et diam.</p>
-      </ion-card-content>      
-    </ion-card>
-  </div>
-    <!-- LA MISMA CARD PERO REPETIDA 2 VECES -->
-    <!-- <ion-card>
-      <ion-card-title>
-        <ion-grid>
-          <ion-row class="ion-align-items-center">
-            <ion-col size="2">
-              
-              <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
-            </ion-col>
-            <ion-col size="8">*User</ion-col>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        
-      </ion-card-title>
-      <ion-card-content>
-        
-        <img src="https://th.bing.com/th/id/OIP.1756oB0Q3DwO-qQo8UvB8gHaE6?rs=1&pid=ImgDetMain" alt="">
-        <ion-grid >
-          <ion-row>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="heart-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="chatbubble-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col size=2>
-              <ion-button fill="clear">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </ion-button> 
-            </ion-col>
-            <ion-col offset="4" size="2">
-              <ion-button fill="clear">
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <p>Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Sed ligula est,
-           luctus ac facilisis ut, malesuada et diam.</p>
-      </ion-card-content>      
-    </ion-card>
-
-    <ion-card>
-      <ion-card-title>
-        <ion-grid>
-          <ion-row class="ion-align-items-center">
-            <ion-col size="2">
-              
-              <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
-            </ion-col>
-            <ion-col size="8">*User</ion-col>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        
-      </ion-card-title>
-      <ion-card-content>
-        
-        <img src="https://th.bing.com/th/id/OIP.1756oB0Q3DwO-qQo8UvB8gHaE6?rs=1&pid=ImgDetMain" alt="">
-        <ion-grid >
-          <ion-row>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="heart-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col size="2">
-              <ion-button fill="clear">
-                <ion-icon name="chatbubble-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-            <ion-col size=2>
-              <ion-button fill="clear">
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </ion-button> 
-            </ion-col>
-            <ion-col offset="4" size="2">
-              <ion-button fill="clear">
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <p>Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit. Sed ligula est,
-           luctus ac facilisis ut, malesuada et diam.</p>
-      </ion-card-content>      
-    </ion-card> -->
-
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="Menu">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button expand="full" color="light">Opciones</ion-button>
+    <ion-button expand="full" color="danger">Cerrar Sesion</ion-button>
+    <ion-menu-toggle>
+      <ion-button color="medium">Cancelar</ion-button>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="titulo">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> 
+    <ion-text *ngIf="photoService.photos.length === 0">
+      <h2>Presiona el icono de la cámara para crear una publicación nueva</h2>
+  </ion-text>
+    <div *ngFor="let photo of photoService.photos; index as position"><!--  Div para hacer el ngFor -->
+      <!-- <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath" ></ion-img>
+      </ion-col> -->
+      <ion-card>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="2">
+                <!-- Imagen de perfil de prueba -->
+                <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
+              </ion-col>
+              <ion-col size="8">{{datosUsuario.email}}</ion-col>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+        </ion-card-title>
+        <ion-card-content>
+          <!-- Imagen de prueba -->
+          <img [src]="photo.webviewPath" alt="">
+          <ion-grid >
+            <ion-row>
+              <ion-col size="2" >
+                <ion-button fill="clear">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size=2>
+                <ion-button fill="clear">
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </ion-button> 
+              </ion-col>
+              <ion-col offset="4" size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Sed ligula est,
+             luctus ac facilisis ut, malesuada et diam.</p>
+        </ion-card-content>      
+      </ion-card>
+    </div>
+      <!-- LA MISMA CARD PERO REPETIDA 2 VECES -->
+      <!-- <ion-card>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="2">
+                
+                <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
+              </ion-col>
+              <ion-col size="8">*User</ion-col>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+        </ion-card-title>
+        <ion-card-content>
+          
+          <img src="https://th.bing.com/th/id/OIP.1756oB0Q3DwO-qQo8UvB8gHaE6?rs=1&pid=ImgDetMain" alt="">
+          <ion-grid >
+            <ion-row>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size=2>
+                <ion-button fill="clear">
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </ion-button> 
+              </ion-col>
+              <ion-col offset="4" size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Sed ligula est,
+             luctus ac facilisis ut, malesuada et diam.</p>
+        </ion-card-content>      
+      </ion-card>
   
-</ion-content>
+      <ion-card>
+        <ion-card-title>
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="2">
+                
+                <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
+              </ion-col>
+              <ion-col size="8">*User</ion-col>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="ellipsis-horizontal"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+        </ion-card-title>
+        <ion-card-content>
+          
+          <img src="https://th.bing.com/th/id/OIP.1756oB0Q3DwO-qQo8UvB8gHaE6?rs=1&pid=ImgDetMain" alt="">
+          <ion-grid >
+            <ion-row>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="chatbubble-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+              <ion-col size=2>
+                <ion-button fill="clear">
+                  <ion-icon name="paper-plane-outline"></ion-icon>
+                </ion-button> 
+              </ion-col>
+              <ion-col offset="4" size="2">
+                <ion-button fill="clear">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. Sed ligula est,
+             luctus ac facilisis ut, malesuada et diam.</p>
+        </ion-card-content>      
+      </ion-card> -->
+  </ion-content>
+</div>

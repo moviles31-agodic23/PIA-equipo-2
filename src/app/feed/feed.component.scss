@@ -7,3 +7,14 @@ ion-card-content
     img{
         border-radius: 5px;
     }
+.titulo{
+    text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.Menu{
+    text-align: center;
+}
