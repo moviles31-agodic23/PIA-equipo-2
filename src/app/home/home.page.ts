@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,11 @@ import { PhotoService } from '../services/photo.service';
 })
 export class HomePage {
 
-  constructor(public photoService: PhotoService) {}
+  constructor(public photoService: PhotoService, public router: Router) {}
 
   addPhotoToGallery() {
+    this.router.navigate(['/home/publicar']);
     this.photoService.addNewToGallery();
+    
   }
 }

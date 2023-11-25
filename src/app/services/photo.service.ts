@@ -18,7 +18,7 @@ export class PhotoService {
       quality: 100
     });
 
-    this.photos.unshift({
+    this.borrador.unshift({
       filepath: "soon...",
       webviewPath: capturedPhoto.webPath!
     });
@@ -35,7 +35,7 @@ export class PhotoService {
       webviewPath: capturedPhoto.webPath!
     });
   }
-
+  public borrador: UserPhoto[]=[];
   public profile: UserPhoto[]=[];
   public photos: UserPhoto[]=[];
 }
