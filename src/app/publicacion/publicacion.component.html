@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Borrador
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content">
+  <ion-card>
+    
+    <ion-card-content>
+      <div class="image-container">
+      
+
+        <!--Aqui va la imagen-->
+
+      </div>
+      
+      <ion-list class="Formulario">
+        <!-- Formulario de Cambio de Usuario y Descripción -->
+        <ion-item>
+          
+          <ion-textarea aria-label="Descripción" [(ngModel)]="Descripcion" name="nuevaDescripcion"></ion-textarea>
+        </ion-item>
+
+        <!-- Botón para Enviar el Formulario -->
+        <ion-button color="medium" expand="full" (click)="publicarFoto()">Publicar</ion-button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

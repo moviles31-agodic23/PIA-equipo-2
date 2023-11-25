@@ -11,6 +11,7 @@ import { CamaraComponent } from '../camara/camara.component';
 import { PerfilComponent } from '../perfil/perfil.component';
 import { FeedComponent } from '../feed/feed.component';
 import { EditarPerfilComponent } from '../editar-perfil/editar-perfil.component';
+import { PublicacionComponent } from '../publicacion/publicacion.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { EditarPerfilComponent } from '../editar-perfil/editar-perfil.component'
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, InicioSesionComponent, CamaraComponent, PerfilComponent, FeedComponent,EditarPerfilComponent]
+  declarations: [HomePage, InicioSesionComponent, CamaraComponent, PerfilComponent, FeedComponent,EditarPerfilComponent,PublicacionComponent]
 })
 export class HomePageModule {}

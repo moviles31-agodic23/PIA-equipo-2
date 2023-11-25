@@ -1,0 +1,26 @@
+.custom-content {
+    max-width: 600px; /* Establece el ancho máximo del contenido */
+    margin: auto; /* Centra el contenido en la pantalla */
+  }
+@media only screen and (max-width: 600px) {
+    .custom-content {
+        max-width: 100%; /* Utiliza el ancho completo en dispositivos más pequeños */
+    }
+}
+
+.image-container{
+    width: 100%; /* Utiliza todo el ancho disponible en ion-content */
+    max-height: 300px; /* Establece una altura máxima para el contenedor de imágenes */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es demasiado grande */
+    white-space: nowrap; /* Evita que las imágenes se envuelvan a la siguiente línea */
+    display: flex; /* Usa un diseño de caja flexible */
+    justify-content: space-between;
+}
+.image-container img {
+    max-width: 30%; /* Ancho máximo de cada imagen */
+    height: auto; /* Ajusta automáticamente la altura según el ancho */
+}
+
+.Formulario{
+    width: 100%;
+}
