@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
+import { PublishService } from '../services/publish.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-publicacion',
@@ -10,11 +12,12 @@ export class PublicacionComponent  implements OnInit {
 
   Descripcion: string="";
 
-  constructor(public photoService: PhotoService) { }
+  constructor(public photoService: PhotoService,
+              public publish: PublishService,
+              public router: Router) { }
 
   ngOnInit() {}
 
-  publicaciones: { foto: string | undefined, descripcion: string }[] = [];
 
   publicarFoto() {
     const fotoActual = this.photoService.borrador[0]?.webviewPath;
@@ -23,11 +26,13 @@ export class PublicacionComponent  implements OnInit {
       descripcion: this.Descripcion,
     };
 
-    this.publicaciones.push(nuevaPublicacion);
+    this.publish.publicaciones.unshift(nuevaPublicacion);
 
     this.Descripcion = '';
 
+    this.router.navigate(['/home/inicio']);
     console.log('Descripción:', this.Descripcion);
+    console.log('foto:', fotoActual);
   }
 
 }
