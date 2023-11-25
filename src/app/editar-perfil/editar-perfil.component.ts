@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 import { DatosUsuarioService } from '../datos-usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -11,11 +12,11 @@ export class EditarPerfilComponent  implements OnInit {
 
   nuevoUsuario: string = this.datosUsuario.usuario;
   nuevoCorreo: string = this.datosUsuario.email;
-  nuevaDescripcion: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula est, luctus ac facilisis ut, malesuada et diam. Integer sed gravida lectus.';
-  imagenUsuario: string="https://th.bing.com/th/id/R.39eb0bbf2cc33ba02f53f8585004f820?rik=E0Gn4xMJk2ZerA&pid=ImgRaw&r=0";
+  nuevaDescripcion: string = this.datosUsuario.descripcion;
 
   constructor(public photoService: PhotoService,
-              public datosUsuario: DatosUsuarioService) { }
+              public datosUsuario: DatosUsuarioService,
+              public router: Router) { }
   
   
 
@@ -24,14 +25,17 @@ export class EditarPerfilComponent  implements OnInit {
   async elegirImagen() {
     this.photoService.photoUser();
   }
-
+  
   guardarCambios() {
     
     console.log('Nuevo Usuario:', this.nuevoUsuario);
     console.log('Nuevo Correo:', this.nuevoCorreo);
     console.log('Nueva Descripción:', this.nuevaDescripcion);
+
     //Aqui hacemos cambios en el backend
     this.datosUsuario.usuario=this.nuevoUsuario;
     this.datosUsuario.email= this.nuevoCorreo;
+    this.datosUsuario.descripcion=this.nuevaDescripcion;
+    this.router.navigate(['/home/perfil'])
   }
 }

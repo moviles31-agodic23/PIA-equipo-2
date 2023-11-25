@@ -1,6 +1,8 @@
-.imgPerfil{
-    width: 90%;
-    border-radius: 50%;
+ion-avatar{
+    width: 40px; /* Ajusta el ancho según tus necesidades */
+    height: 40px; /* Ajusta la altura según tus necesidades */
+    margin: auto;
+    display: block;
 }
 
 ion-card-content

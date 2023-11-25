@@ -6,7 +6,7 @@
   </ion-header>
   <ion-content class="ion-padding">
     <ion-button expand="full" color="light">Opciones</ion-button>
-    <ion-button expand="full" color="danger">Cerrar Sesion</ion-button>
+    <ion-button expand="full" color="danger" (click)="cerrarSesion()">Cerrar Sesion</ion-button>
     <ion-menu-toggle>
       <ion-button color="medium">Cancelar</ion-button>
     </ion-menu-toggle>
@@ -26,18 +26,16 @@
       <h2>Presiona el icono de la cámara para crear una publicación nueva</h2>
   </ion-text>
     <div *ngFor="let photo of photoService.photos; index as position"><!--  Div para hacer el ngFor -->
-      <!-- <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
-        <ion-img [src]="photo.webviewPath" ></ion-img>
-      </ion-col> -->
       <ion-card>
         <ion-card-title>
           <ion-grid>
             <ion-row class="ion-align-items-center">
               <ion-col size="2">
-                <!-- Imagen de perfil de prueba -->
-                <img class="imgPerfil" src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain" alt="">
+                <ion-avatar>
+                  <ion-img [src]="(photoService.profile[0]?.webviewPath) ? photoService.profile[0]?.webviewPath : 'https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?rs=1&pid=ImgDetMain'" alt=""></ion-img>
+                </ion-avatar>
               </ion-col>
-              <ion-col size="8">{{datosUsuario.email}}</ion-col>
+              <ion-col size="8">{{datosUsuario.usuario}}</ion-col>
               <ion-col size="2">
                 <ion-button fill="clear">
                   <ion-icon name="ellipsis-horizontal"></ion-icon>
