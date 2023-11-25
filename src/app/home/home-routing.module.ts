@@ -5,6 +5,7 @@ import { FeedComponent } from '../feed/feed.component';
 import { PerfilComponent } from '../perfil/perfil.component';
 import { EditarPerfilComponent } from '../editar-perfil/editar-perfil.component';
 import { PublicacionComponent } from '../publicacion/publicacion.component';
+import { CamaraComponent } from '../camara/camara.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,7 @@ const routes: Routes = [
       {
         path: 'publicar',
         component: PublicacionComponent
-      }
+      },
     ]
   },
 ];
