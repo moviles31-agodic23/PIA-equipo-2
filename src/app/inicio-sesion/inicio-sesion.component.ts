@@ -38,6 +38,7 @@ export class InicioSesionComponent  implements OnInit {
 
   setUsuario(){
     this.datosUsuario.email= this.login.email;
+    this.datosUsuario.usuario = this.login.email.split('@')[0];
   }
 
   component = HomePage;
