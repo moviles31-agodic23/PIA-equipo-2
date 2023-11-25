@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 import { PublishService } from '../services/publish.service';
 import { Router } from '@angular/router';
+import { getStorage, ref, uploadBytes, uploadString } from "firebase/storage";
+
 
 @Component({
   selector: 'app-publicacion',
@@ -33,6 +35,9 @@ export class PublicacionComponent  implements OnInit {
     this.router.navigate(['/home/inicio']);
     console.log('Descripción:', this.Descripcion);
     console.log('foto:', fotoActual);
+
+    
+    
   }
 
 }
