@@ -48,9 +48,6 @@ export class InicioSesionComponent  implements OnInit {
   async registrar(){
     console.log('datos -> ',this.datos);
     this.auth.registrarUser(this.datos);
-    this.datos.emailReg = '';
-    this.datos.passwordReg = '';
-    this.datos.passwordRegConf = '';
   }
 
   async iniciarSesion(){
@@ -62,8 +59,6 @@ export class InicioSesionComponent  implements OnInit {
       console.log('res -> ', res);
       this.setUsuario();
       this.router.navigate(['/home/inicio']);
-      this.login.email = '';
-      this.login.password = '';
     }
   }
 
